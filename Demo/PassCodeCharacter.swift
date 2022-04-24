@@ -13,7 +13,7 @@ class PassCodeCharacter: UIView {
   @IBInspectable
   public var value: Bool = false {
     didSet {
-      self.view = UIView(frame: CGRect(x: self.frame.width/100, y: self.frame.height/100, width: 60, height: 60))
+      self.view = UIView(frame: CGRect(x: self.frame.width/1000, y: self.frame.height/1000, width: 60, height: 60))
       guard let view = view else {
         return
       }

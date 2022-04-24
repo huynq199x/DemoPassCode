@@ -4,7 +4,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var progressLeadingConstraint: NSLayoutConstraint!
   @IBOutlet weak var progressWidthConstraint: NSLayoutConstraint!
   @IBOutlet weak var progressCenterConstraint: NSLayoutConstraint!
-    
+  
   @IBOutlet weak var progressView: UIView!
   @IBOutlet var buttons: [UIButton]!
     
@@ -28,13 +28,13 @@ class ViewController: UIViewController {
     input += String(sender.tag)
     self.progressWidthConstraint.constant = 240 * min(CGFloat(self.input.count)/CGFloat(numberOfPasswordCharacter), 1)
     progressView.layer.cornerRadius = 30
-    progressView.layer.borderWidth = 1
     
     UIView.animate(withDuration: animationDuration, delay: 0, options: .curveEaseInOut) {
       self.view.layoutIfNeeded()
     } completion: { _ in
       if self.input.count == self.numberOfPasswordCharacter {
         if self.input == self.pass {
+
           self.progressWidthConstraint.constant = CGFloat(240 / self.numberOfPasswordCharacter)
           self.progressLeadingConstraint.isActive = false
           self.progressCenterConstraint.isActive = true
