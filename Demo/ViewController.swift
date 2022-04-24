@@ -41,9 +41,9 @@ class ViewController: UIViewController {
           
           UIView.animate(withDuration: self.animationDuration, delay: 0.5, options: .curveEaseInOut) {
             self.view.layoutIfNeeded()
-//            for character in self.passCodeCharacter {
-//              character.isHidden = true
-//            }
+            for character in self.passCodeCharacter {
+              character.isHidden = true
+            }
             
             self.progressView.backgroundColor = .green
           } completion: { _ in
