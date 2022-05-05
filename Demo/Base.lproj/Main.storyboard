@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="abT-0R-HDc">
-                                <rect key="frame" x="0.0" y="317" width="414" height="545"/>
+                                <rect key="frame" x="0.0" y="310" width="414" height="552"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GXK-62-LsU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
@@ -128,17 +128,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u2h-So-k92">
-                                        <rect key="frame" x="0.0" y="414" width="414" height="131"/>
+                                        <rect key="frame" x="0.0" y="414" width="414" height="138"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET4-x9-0um">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="131"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="138"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-13-Qbn">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="131"/>
+                                                <rect key="frame" x="138" y="0.0" width="138" height="138"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="0">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -148,7 +148,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-WA-PsX">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="131"/>
+                                                <rect key="frame" x="276" y="0.0" width="138" height="138"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="DELETE"/>
                                                 <connections>
@@ -166,10 +166,10 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiO-oG-GHl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="273"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="266"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-uX-LDa">
-                                        <rect key="frame" x="87" y="97" width="240" height="60"/>
+                                        <rect key="frame" x="87" y="93.5" width="240" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-0J-qHV" userLabel="Progress View">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
@@ -227,12 +227,9 @@
                                                     <constraint firstItem="KQc-K5-Fug" firstAttribute="bottom" secondItem="lXn-p8-Wba" secondAttribute="bottom" id="Qqo-V2-bG1"/>
                                                     <constraint firstItem="Vb0-3V-bRy" firstAttribute="top" secondItem="KQc-K5-Fug" secondAttribute="top" id="RIq-AA-SfG"/>
                                                     <constraint firstAttribute="width" id="Z53-fu-2Er"/>
-                                                    <constraint firstItem="lXn-p8-Wba" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" constant="180" id="acN-l3-ct9"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lXn-p8-Wba" secondAttribute="trailing" constant="-240" id="avs-Uy-so2"/>
                                                     <constraint firstItem="Vb0-3V-bRy" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" constant="60" id="jbF-3o-P13"/>
                                                     <constraint firstItem="KQc-K5-Fug" firstAttribute="leading" secondItem="Vb0-3V-bRy" secondAttribute="trailing" id="nCX-qH-GJV"/>
                                                     <constraint firstItem="KQc-K5-Fug" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" constant="120" id="pGO-L9-qOb"/>
-                                                    <constraint firstItem="4hW-9J-A2T" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" id="rWk-wE-7Ti"/>
                                                     <constraint firstItem="Vb0-3V-bRy" firstAttribute="bottom" secondItem="KQc-K5-Fug" secondAttribute="bottom" id="siv-oN-3w2"/>
                                                 </constraints>
                                             </view>
@@ -260,7 +257,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wER-3q-WNZ" firstAttribute="centerX" secondItem="WiO-oG-GHl" secondAttribute="centerX" id="1Js-zr-gQ4"/>
-                                    <constraint firstItem="wER-3q-WNZ" firstAttribute="bottom" secondItem="Omh-uX-LDa" secondAttribute="top" constant="-8" id="LAR-B0-dJ7"/>
+                                    <constraint firstItem="wER-3q-WNZ" firstAttribute="bottom" secondItem="Omh-uX-LDa" secondAttribute="top" constant="-4.5" id="LAR-B0-dJ7"/>
                                     <constraint firstItem="Omh-uX-LDa" firstAttribute="centerY" secondItem="WiO-oG-GHl" secondAttribute="centerY" constant="-9.5" id="Z0x-gT-5P8"/>
                                     <constraint firstItem="Omh-uX-LDa" firstAttribute="centerX" secondItem="WiO-oG-GHl" secondAttribute="centerX" id="nE5-o2-CLK"/>
                                 </constraints>
@@ -276,7 +273,6 @@
                             <constraint firstItem="WiO-oG-GHl" firstAttribute="top" secondItem="OMu-kv-nrH" secondAttribute="top" id="cP7-Ud-2dj"/>
                             <constraint firstItem="OMu-kv-nrH" firstAttribute="bottom" secondItem="abT-0R-HDc" secondAttribute="bottom" id="cbx-ZA-HFu"/>
                             <constraint firstItem="WiO-oG-GHl" firstAttribute="leading" secondItem="OMu-kv-nrH" secondAttribute="leading" id="hwp-fq-OuF"/>
-                            <constraint firstItem="abT-0R-HDc" firstAttribute="height" secondItem="WiO-oG-GHl" secondAttribute="height" multiplier="2" constant="-1" id="jPB-ua-8F7"/>
                             <constraint firstItem="abT-0R-HDc" firstAttribute="top" secondItem="WiO-oG-GHl" secondAttribute="bottom" id="jbJ-jm-eNO"/>
                         </constraints>
                     </view>
