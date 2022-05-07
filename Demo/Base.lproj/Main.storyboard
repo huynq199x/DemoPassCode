@@ -174,63 +174,65 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-0J-qHV" userLabel="Progress View">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hW-9J-A2T" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wRH-Te-bd9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="60"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-3V-bRy" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="7I6-te-OhT"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="myF-U8-BOY"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hW-9J-A2T" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
+                                                                <rect key="frame" x="70" y="0.0" width="60" height="60"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="RSR-5g-Nw9"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="caI-hC-wnO"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQc-K5-Fug" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
+                                                                <rect key="frame" x="140" y="0.0" width="60" height="60"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="6WD-nj-xwY"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="mv8-Wc-gkN"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-p8-Wba" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
+                                                                <rect key="frame" x="210" y="0.0" width="60" height="60"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="L1w-uS-Jhx"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="do9-Iu-TXO"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="4hW-9J-A2T" secondAttribute="height" multiplier="1:1" id="pIk-bz-biQ"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="GZ7-YX-axg"/>
+                                                            <constraint firstAttribute="height" constant="60" id="dpX-Cu-V6q"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-3V-bRy" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="60" y="0.0" width="60" height="60"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Vb0-3V-bRy" secondAttribute="height" multiplier="1:1" id="m0G-On-w8o"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQc-K5-Fug" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="120" y="0.0" width="60" height="60"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="KQc-K5-Fug" secondAttribute="height" multiplier="1:1" id="cUc-hW-ume"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-p8-Wba" customClass="PassCodeCharacter" customModule="Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="180" y="0.0" width="60" height="60"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="lXn-p8-Wba" secondAttribute="height" multiplier="1:1" id="Ozz-wP-dDK"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="4hW-9J-A2T" firstAttribute="top" secondItem="uEK-0J-qHV" secondAttribute="top" id="4qZ-9B-9Ra"/>
-                                                    <constraint firstItem="4hW-9J-A2T" firstAttribute="bottom" secondItem="Vb0-3V-bRy" secondAttribute="bottom" id="Ckp-bb-xim"/>
-                                                    <constraint firstItem="lXn-p8-Wba" firstAttribute="leading" secondItem="KQc-K5-Fug" secondAttribute="trailing" id="GFG-23-roL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Vb0-3V-bRy" secondAttribute="bottom" id="HVY-tI-E6s"/>
-                                                    <constraint firstItem="Vb0-3V-bRy" firstAttribute="leading" secondItem="4hW-9J-A2T" secondAttribute="trailing" id="KXT-Ov-HGF"/>
-                                                    <constraint firstItem="4hW-9J-A2T" firstAttribute="top" secondItem="Vb0-3V-bRy" secondAttribute="top" id="LWz-Yq-JWl"/>
-                                                    <constraint firstItem="KQc-K5-Fug" firstAttribute="top" secondItem="lXn-p8-Wba" secondAttribute="top" id="LuK-KK-C9t"/>
-                                                    <constraint firstItem="KQc-K5-Fug" firstAttribute="bottom" secondItem="lXn-p8-Wba" secondAttribute="bottom" id="Qqo-V2-bG1"/>
-                                                    <constraint firstItem="Vb0-3V-bRy" firstAttribute="top" secondItem="KQc-K5-Fug" secondAttribute="top" id="RIq-AA-SfG"/>
+                                                    <constraint firstItem="wRH-Te-bd9" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" id="FrI-Nw-xiB"/>
+                                                    <constraint firstItem="wRH-Te-bd9" firstAttribute="centerY" secondItem="uEK-0J-qHV" secondAttribute="centerY" id="VUq-51-WWm"/>
                                                     <constraint firstAttribute="width" id="Z53-fu-2Er"/>
-                                                    <constraint firstItem="Vb0-3V-bRy" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" constant="60" id="jbF-3o-P13"/>
-                                                    <constraint firstItem="KQc-K5-Fug" firstAttribute="leading" secondItem="Vb0-3V-bRy" secondAttribute="trailing" id="nCX-qH-GJV"/>
-                                                    <constraint firstItem="KQc-K5-Fug" firstAttribute="leading" secondItem="uEK-0J-qHV" secondAttribute="leading" constant="120" id="pGO-L9-qOb"/>
-                                                    <constraint firstItem="Vb0-3V-bRy" firstAttribute="bottom" secondItem="KQc-K5-Fug" secondAttribute="bottom" id="siv-oN-3w2"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -238,6 +240,8 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Omh-uX-LDa" secondAttribute="height" multiplier="4:1" id="Q23-GP-0P5"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="leading" secondItem="Omh-uX-LDa" secondAttribute="leading" id="dyB-t6-jd3"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="e72-fx-cMu"/>
+                                            <constraint firstAttribute="height" constant="60" id="gd8-ZJ-l7p"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="top" secondItem="Omh-uX-LDa" secondAttribute="top" id="xA8-17-YP9"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="centerX" secondItem="Omh-uX-LDa" secondAttribute="centerX" id="xgc-xi-Eea"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="height" secondItem="Omh-uX-LDa" secondAttribute="height" id="z7p-Cf-wta"/>
@@ -281,6 +285,7 @@
                         <outlet property="progressLeadingConstraint" destination="dyB-t6-jd3" id="mEB-Np-DPe"/>
                         <outlet property="progressView" destination="uEK-0J-qHV" id="FEG-TD-aoW"/>
                         <outlet property="progressWidthConstraint" destination="Z53-fu-2Er" id="qNw-1u-NDE"/>
+                        <outlet property="stackViewPassCodeCharacter" destination="wRH-Te-bd9" id="L8w-rx-vVh"/>
                         <outletCollection property="buttons" destination="frC-BB-IEQ" collectionClass="NSMutableArray" id="yL5-Kp-pus"/>
                         <outletCollection property="buttons" destination="qQQ-Wh-6dm" collectionClass="NSMutableArray" id="jUV-UO-bB2"/>
                         <outletCollection property="buttons" destination="lqT-2D-Uvx" collectionClass="NSMutableArray" id="bx4-3F-jVa"/>
@@ -294,9 +299,9 @@
                         <outletCollection property="buttons" destination="XFK-WA-PsX" collectionClass="NSMutableArray" id="Aef-rD-65M"/>
                         <outletCollection property="buttons" destination="ET4-x9-0um" collectionClass="NSMutableArray" id="qLt-AF-CQc"/>
                         <outletCollection property="passCodeCharacter" destination="4hW-9J-A2T" collectionClass="NSMutableArray" id="MU8-hn-2qW"/>
-                        <outletCollection property="passCodeCharacter" destination="Vb0-3V-bRy" collectionClass="NSMutableArray" id="qOj-8E-Ses"/>
                         <outletCollection property="passCodeCharacter" destination="KQc-K5-Fug" collectionClass="NSMutableArray" id="eeM-Ub-Fgf"/>
                         <outletCollection property="passCodeCharacter" destination="lXn-p8-Wba" collectionClass="NSMutableArray" id="1vg-hV-xao"/>
+                        <outletCollection property="passCodeCharacter" destination="Vb0-3V-bRy" collectionClass="NSMutableArray" id="qOj-8E-Ses"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8i-lE-Ihe" sceneMemberID="firstResponder"/>

@@ -24,21 +24,5 @@ class PassCodeCharacter: UIView {
       self.addSubview(view)
     }
   }
-
-  override func tintColorDidChange() {
-    super.tintColorDidChange()
-    guard let view = view else {
-      return
-    }
-    view.layer.borderColor = self.tintColor.cgColor
-  }
-
-  public override init(frame: CGRect) {
-    super.init(frame: frame)
-  }
-
-  public required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
 }
 
