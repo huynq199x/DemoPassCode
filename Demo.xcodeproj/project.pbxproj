@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13738DFE2814287C00E96C66 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13738DFD2814287C00E96C66 /* UnlockViewController.swift */; };
-		13780D282814F2B0006DFB35 /* PassCodeCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13780D272814F2B0006DFB35 /* PassCodeCharacter.swift */; };
+		13C27B8D282FFBF30083CF31 /* NumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C27B8C282FFBF30083CF31 /* NumberButton.swift */; };
 		13E8C7D22812DCE500CC8C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8C7D12812DCE500CC8C7F /* AppDelegate.swift */; };
 		13E8C7D42812DCE500CC8C7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8C7D32812DCE500CC8C7F /* SceneDelegate.swift */; };
 		13E8C7D62812DCE500CC8C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8C7D52812DCE500CC8C7F /* ViewController.swift */; };
@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		13738DFD2814287C00E96C66 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
-		13780D272814F2B0006DFB35 /* PassCodeCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeCharacter.swift; sourceTree = "<group>"; };
+		13C27B8C282FFBF30083CF31 /* NumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
 		13E8C7CE2812DCE500CC8C7F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E8C7D12812DCE500CC8C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E8C7D32812DCE500CC8C7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				13E8C7D12812DCE500CC8C7F /* AppDelegate.swift */,
+				13C27B8C282FFBF30083CF31 /* NumberButton.swift */,
 				13E8C7D32812DCE500CC8C7F /* SceneDelegate.swift */,
 				13E8C7D52812DCE500CC8C7F /* ViewController.swift */,
 				13738DFD2814287C00E96C66 /* UnlockViewController.swift */,
-				13780D272814F2B0006DFB35 /* PassCodeCharacter.swift */,
 				13E8C7D72812DCE500CC8C7F /* Main.storyboard */,
 				13E8C7DA2812DCE600CC8C7F /* Assets.xcassets */,
 				13E8C7DC2812DCE600CC8C7F /* LaunchScreen.storyboard */,
@@ -144,8 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C27B8D282FFBF30083CF31 /* NumberButton.swift in Sources */,
 				13738DFE2814287C00E96C66 /* UnlockViewController.swift in Sources */,
-				13780D282814F2B0006DFB35 /* PassCodeCharacter.swift in Sources */,
 				13E8C7D62812DCE500CC8C7F /* ViewController.swift in Sources */,
 				13E8C7D22812DCE500CC8C7F /* AppDelegate.swift in Sources */,
 				13E8C7D42812DCE500CC8C7F /* SceneDelegate.swift in Sources */,
