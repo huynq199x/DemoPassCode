@@ -301,10 +301,6 @@
                         <outlet property="progressView" destination="uEK-0J-qHV" id="FEG-TD-aoW"/>
                         <outlet property="progressWidthConstraint" destination="Z53-fu-2Er" id="qNw-1u-NDE"/>
                         <outlet property="stackViewPassCodeCharacter" destination="wRH-Te-bd9" id="L8w-rx-vVh"/>
-                        <outletCollection property="passCodeCharacter" destination="Vb0-3V-bRy" collectionClass="NSMutableArray" id="Yd0-d1-qw8"/>
-                        <outletCollection property="passCodeCharacter" destination="4hW-9J-A2T" collectionClass="NSMutableArray" id="1Bw-1D-j00"/>
-                        <outletCollection property="passCodeCharacter" destination="KQc-K5-Fug" collectionClass="NSMutableArray" id="xTZ-Sg-mmC"/>
-                        <outletCollection property="passCodeCharacter" destination="lXn-p8-Wba" collectionClass="NSMutableArray" id="Zrw-W5-sed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8i-lE-Ihe" sceneMemberID="firstResponder"/>

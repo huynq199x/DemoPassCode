@@ -7,59 +7,67 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var progressView: UIView!
     
-    @IBOutlet var passCodeCharacter: [UIView]!
-    
     @IBOutlet weak var stackViewPassCodeCharacter: UIStackView!
     
     private let animationDuration: CGFloat = 0.33
     private var input: String = ""
     private let numberOfPasswordCharacter: Int = 4
     private let pass: String = "0000"
+    private let frameView: CGFloat = 30
+    private let delayAnimate: CGFloat = 0.5
     private var spacingOfStackViewPassCodeCharacter: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         spacingOfStackViewPassCodeCharacter = stackViewPassCodeCharacter.spacing
-        for character in passCodeCharacter {
-            character.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            character.layer.borderWidth = 1
-            character.layer.cornerRadius = 15
-            character.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
+        for subView in self.stackViewPassCodeCharacter.arrangedSubviews {
+            subView.layer.borderWidth = 1
+            subView.layer.cornerRadius = frameView/2
+            subView.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        input += String(sender.tag)
-        self.progressWidthConstraint.constant = 120 * min(CGFloat(self.input.count)/CGFloat(numberOfPasswordCharacter), 1) + spacingOfStackViewPassCodeCharacter * CGFloat(self.input.count - 1)
-        progressView.layer.cornerRadius = 15
+        if input.count < numberOfPasswordCharacter {
+            input += String(sender.tag)
+            self.progressWidthConstraint.constant = frameView * CGFloat(numberOfPasswordCharacter) * min(CGFloat(self.input.count)/CGFloat(numberOfPasswordCharacter), 1) + spacingOfStackViewPassCodeCharacter * CGFloat(self.input.count - 1)
+        }
+        else if input.count == numberOfPasswordCharacter && input == pass {
+            self.progressWidthConstraint.constant = frameView
+        }
+        else {
+            input = ""
+        }
+        progressView.layer.cornerRadius = frameView/2
         
         UIView.animate(withDuration: animationDuration, delay: 0, options: .curveEaseInOut) {
             self.view.layoutIfNeeded()
         } completion: { _ in
             if self.input.count == self.numberOfPasswordCharacter {
                 if self.input == self.pass {
-
-                    self.progressWidthConstraint.constant = CGFloat(120 / self.numberOfPasswordCharacter)
+                    
+                    self.progressWidthConstraint.constant = self.frameView
                     self.progressLeadingConstraint.isActive = false
                     self.progressCenterConstraint.isActive = true
           
-                    UIView.animate(withDuration: self.animationDuration, delay: 0.5, options: .curveEaseInOut) {
+                    UIView.animate(withDuration: self.animationDuration, delay: self.delayAnimate, options: .curveEaseInOut) {
                         self.view.layoutIfNeeded()
                         self.stackViewPassCodeCharacter.isHidden = true
                         self.progressView.backgroundColor = .green
+
                     } completion: { _ in
                         // Reset
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             self.showUnlockView()
                         }
                     }
                 }
                 else {
-                    UIView.animate(withDuration: self.animationDuration, delay: 0.5, options: .curveEaseInOut) {
+                    UIView.animate(withDuration: self.animationDuration, delay: self.delayAnimate, options: .curveEaseInOut) {
                         self.view.layoutIfNeeded()
                     } completion: { _ in
                         // Reset
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + self.delayAnimate) {
                             self.input = ""
                             self.progressWidthConstraint.constant = 0
                             self.progressCenterConstraint.isActive = false
@@ -74,8 +82,8 @@ class ViewController: UIViewController {
         if self.input.count > 0 {
             self.input.removeLast()
         }
-        self.progressWidthConstraint.constant = 120 * min(CGFloat(self.input.count)/CGFloat(numberOfPasswordCharacter), 1) + spacingOfStackViewPassCodeCharacter * CGFloat(self.input.count - 1)
-        UIView.animate(withDuration: self.animationDuration, delay: 0.05, options: .curveEaseInOut){
+        self.progressWidthConstraint.constant = frameView * CGFloat(numberOfPasswordCharacter) * min(CGFloat(self.input.count)/CGFloat(numberOfPasswordCharacter), 1) + spacingOfStackViewPassCodeCharacter * CGFloat(self.input.count - 1)
+        UIView.animate(withDuration: self.animationDuration, delay: delayAnimate, options: .curveEaseInOut){
             self.view.layoutIfNeeded()
         }
     }
