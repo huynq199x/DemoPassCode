@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
     
-    //Sử dụng didFinishLauchingWithOptions và applicatioDidEnterBackground để hiện thị màn hình nhập passcode sau khi nhấn Home
+    //Sử dụng applicationDidEnterBackground để hiện thị màn hình nhập passcode sau khi nhấn Home
     func applicationDidEnterBackground(_ application: UIApplication) {
     }
 }
