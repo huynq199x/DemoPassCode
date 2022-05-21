@@ -22,15 +22,11 @@ class CheckPassCodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        spacingOfStackViewPassCodeCharacter = stackViewPassCodeCharacter.spacing
-//        userDefaults.removeObject(forKey: "input")
-        if userDefaults.value(forKey: "input") != nil {
-            pass = userDefaults.value(forKey: "input")  as! String
-        }
-        else {
-            pass = ""
-        }
-        print(pass)
+        setupData()
+        setupUI()
+    }
+    
+    func setupUI() {
         for subView in self.stackViewPassCodeCharacter.arrangedSubviews {
             subView.layer.borderWidth = 1
             subView.layer.cornerRadius = frameView/2
@@ -42,6 +38,19 @@ class CheckPassCodeViewController: UIViewController {
         else {
             statusLabel.text = "ENTER YOUR PASSCODE"
         }
+    }
+    
+    func setupData() {
+        spacingOfStackViewPassCodeCharacter = stackViewPassCodeCharacter.spacing
+//        userDefaults.removeObject(forKey: "inputPassCode")
+//        userDefaults.removeObject(forKey: "inputTemporary")
+        if userDefaults.value(forKey: "inputPassCode") != nil {
+            pass = userDefaults.value(forKey: "inputPassCode")  as! String
+        }
+        else {
+            pass = ""
+        }
+        print(pass)
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -104,18 +113,15 @@ class CheckPassCodeViewController: UIViewController {
                 input = ""
             }
             
-            // gán input vào userDefaults
-            userDefaults.setValue(input, forKey: "input")
+            // gán input vào biến tạm thời
+            userDefaults.setValue(input, forKey: "inputTemporary")
+            
             progressView.layer.cornerRadius = frameView/2
             
             UIView.animate(withDuration: animationDuration, delay: 0, options: .curveEaseInOut) {
                 self.view.layoutIfNeeded()
             } completion: { _ in
-                
-                // Kiểm tra xem nếu nhập đủ 4 kí tự thì get giá trị từ userDefaluts rồi gán cho pass
                 if self.input.count == self.numberOfPasswordCharacter {
-                    
-                    self.pass = self.userDefaults.value(forKey: "input") as! String
                     UIView.animate(withDuration: self.animationDuration, delay: self.delayAnimate, options: .curveEaseInOut) {
                         self.view.layoutIfNeeded()
                     } completion: { _ in
@@ -143,7 +149,8 @@ class CheckPassCodeViewController: UIViewController {
                 self.view.layoutIfNeeded()
             } completion: { _ in
                 if self.input.count == self.numberOfPasswordCharacter {
-                    if self.input == self.pass {
+                    if self.input == self.userDefaults.value(forKey: "inputTemporary") as! String {
+                        self.userDefaults.setValue(self.input, forKey: "inputPassCode")
                         UIView.animate(withDuration: self.animationDuration, delay: self.delayAnimate, options: .curveEaseInOut) {
                             self.view.layoutIfNeeded()
                         } completion: { _ in
@@ -178,16 +185,16 @@ class CheckPassCodeViewController: UIViewController {
             self.input.removeLast()
         }
         self.progressWidthConstraint.constant = frameView * CGFloat(numberOfPasswordCharacter) * min(CGFloat(self.input.count)/CGFloat(numberOfPasswordCharacter), 1) + spacingOfStackViewPassCodeCharacter * CGFloat(self.input.count - 1)
-        UIView.animate(withDuration: self.animationDuration, delay: delayAnimate, options: .curveEaseInOut){
+        UIView.animate(withDuration: self.animationDuration, delay: 0, options: .curveEaseInOut){
             self.view.layoutIfNeeded()
         }
     }
     
     @objc func showUnlockView() {
-        guard let unlockVC = storyboard?.instantiateViewController(withIdentifier: "UnlockView") as? UnlockViewController else { return }
-        unlockVC.modalPresentationStyle = .fullScreen
-        unlockVC.modalTransitionStyle = .crossDissolve
-        present(unlockVC, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : UnlockViewController = storyboard.instantiateViewController(withIdentifier: "UnlockView") as! UnlockViewController
+        let navigation = UINavigationController(rootViewController: vc)
+        self.view.addSubview(navigation.view)
     }
 }
 
