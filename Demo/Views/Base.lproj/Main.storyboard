@@ -205,9 +205,6 @@
                                                                     <constraint firstAttribute="height" constant="30" id="7I6-te-OhT"/>
                                                                     <constraint firstAttribute="width" constant="30" id="myF-U8-BOY"/>
                                                                 </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hW-9J-A2T">
                                                                 <rect key="frame" x="70" y="0.0" width="30" height="30"/>
@@ -216,9 +213,6 @@
                                                                     <constraint firstAttribute="width" constant="30" id="RSR-5g-Nw9"/>
                                                                     <constraint firstAttribute="height" constant="30" id="caI-hC-wnO"/>
                                                                 </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQc-K5-Fug">
                                                                 <rect key="frame" x="140" y="0.0" width="30" height="30"/>
@@ -227,9 +221,6 @@
                                                                     <constraint firstAttribute="height" constant="30" id="6WD-nj-xwY"/>
                                                                     <constraint firstAttribute="width" constant="30" id="mv8-Wc-gkN"/>
                                                                 </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-p8-Wba">
                                                                 <rect key="frame" x="210" y="0.0" width="30" height="30"/>
@@ -238,9 +229,6 @@
                                                                     <constraint firstAttribute="width" constant="30" id="L1w-uS-Jhx"/>
                                                                     <constraint firstAttribute="height" constant="30" id="do9-Iu-TXO"/>
                                                                 </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="NO"/>
-                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <constraints>

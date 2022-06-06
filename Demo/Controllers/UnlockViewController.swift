@@ -8,8 +8,7 @@
 import UIKit
 
 class UnlockViewController: UIViewController {
-
-    let userDefaults = UserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

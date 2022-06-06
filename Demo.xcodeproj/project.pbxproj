@@ -41,6 +41,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1307DDD1283986D1008F6D8A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				13E8C7D12812DCE500CC8C7F /* AppDelegate.swift */,
+				13E8C7D32812DCE500CC8C7F /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1307DDD2283986E4008F6D8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13E8C7D52812DCE500CC8C7F /* CheckPassCodeViewController.swift */,
+				13738DFD2814287C00E96C66 /* UnlockViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1307DDD3283986F9008F6D8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13E8C7D72812DCE500CC8C7F /* Main.storyboard */,
+				13E8C7DC2812DCE600CC8C7F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1307DDD428398706008F6D8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13E8C7DA2812DCE600CC8C7F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1307DDD528398712008F6D8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13C27B8C282FFBF30083CF31 /* NumberButton.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		13E8C7C52812DCE500CC8C7F = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +103,11 @@
 		13E8C7D02812DCE500CC8C7F /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				13E8C7D12812DCE500CC8C7F /* AppDelegate.swift */,
-				13E8C7D32812DCE500CC8C7F /* SceneDelegate.swift */,
-				13C27B8C282FFBF30083CF31 /* NumberButton.swift */,
-				13E8C7D52812DCE500CC8C7F /* CheckPassCodeViewController.swift */,
-				13738DFD2814287C00E96C66 /* UnlockViewController.swift */,
-				13E8C7D72812DCE500CC8C7F /* Main.storyboard */,
-				13E8C7DA2812DCE600CC8C7F /* Assets.xcassets */,
-				13E8C7DC2812DCE600CC8C7F /* LaunchScreen.storyboard */,
+				1307DDD1283986D1008F6D8A /* AppDelegate */,
+				1307DDD528398712008F6D8A /* Models */,
+				1307DDD2283986E4008F6D8A /* Controllers */,
+				1307DDD3283986F9008F6D8A /* Views */,
+				1307DDD428398706008F6D8A /* Resources */,
 				13E8C7DF2812DCE600CC8C7F /* Info.plist */,
 			);
 			path = Demo;
