@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UnlockViewController: UIViewController {
+class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

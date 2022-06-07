@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tly-Tk-fLL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tly-Tk-fLL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Check Pass Code View Controller-->
+        <!--Pass Code View Controller-->
         <scene sceneID="szd-pP-fQC">
             <objects>
-                <viewController storyboardIdentifier="CheckPassCode" id="Tly-Tk-fLL" customClass="CheckPassCodeViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckPassCode" id="Tly-Tk-fLL" customClass="PassCodeViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NUK-eL-cau">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +249,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Omh-uX-LDa" secondAttribute="height" multiplier="4:1" constant="120" id="Q23-GP-0P5"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="leading" secondItem="Omh-uX-LDa" secondAttribute="leading" id="dyB-t6-jd3"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="e72-fx-cMu"/>
+                                            <constraint firstAttribute="width" priority="999" constant="120" id="e72-fx-cMu"/>
                                             <constraint firstAttribute="height" constant="30" id="gd8-ZJ-l7p"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="top" secondItem="Omh-uX-LDa" secondAttribute="top" id="xA8-17-YP9"/>
                                             <constraint firstItem="uEK-0J-qHV" firstAttribute="centerX" secondItem="Omh-uX-LDa" secondAttribute="centerX" id="xgc-xi-Eea"/>
@@ -284,11 +284,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passcodeStackView" destination="wRH-Te-bd9" id="L8w-rx-vVh"/>
                         <outlet property="progressCenterConstraint" destination="xgc-xi-Eea" id="XCz-zQ-qji"/>
                         <outlet property="progressLeadingConstraint" destination="dyB-t6-jd3" id="mEB-Np-DPe"/>
                         <outlet property="progressView" destination="uEK-0J-qHV" id="FEG-TD-aoW"/>
                         <outlet property="progressWidthConstraint" destination="Z53-fu-2Er" id="qNw-1u-NDE"/>
-                        <outlet property="stackViewPassCodeCharacter" destination="wRH-Te-bd9" id="L8w-rx-vVh"/>
                         <outlet property="statusLabel" destination="wER-3q-WNZ" id="8hL-E6-jGe"/>
                     </connections>
                 </viewController>
@@ -296,20 +296,16 @@
             </objects>
             <point key="canvasLocation" x="252" y="121"/>
         </scene>
-        <!--Unlock View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="sxK-Zj-w2E">
             <objects>
-                <viewController storyboardIdentifier="UnlockView" id="mcM-Ix-rqe" customClass="UnlockViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="mcM-Ix-rqe" customClass="MainViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EbL-Si-P8o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-Ep-axC">
-                                <rect key="frame" x="100" y="406.5" width="214" height="93"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="X5I-93-dpB"/>
-                                    <constraint firstAttribute="height" constant="93" id="nIF-Gs-zOh"/>
-                                </constraints>
+                                <rect key="frame" x="135" y="435.5" width="144.5" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>

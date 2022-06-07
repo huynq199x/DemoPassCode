@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "CheckPassCode") as! CheckPassCodeViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "CheckPassCode") as! PassCodeViewController
             self.window = UIWindow(windowScene: windowScene)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
         if let windowScene = scene as? UIWindowScene {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "CheckPassCode") as! CheckPassCodeViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "CheckPassCode") as! PassCodeViewController
             self.window = UIWindow(windowScene: windowScene)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
