@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tly-Tk-fLL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tly-Tk-fLL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -177,10 +178,10 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiO-oG-GHl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="266"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="262"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER YOUR PASSCODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wER-3q-WNZ">
-                                        <rect key="frame" x="87" y="66" width="240" height="24"/>
+                                        <rect key="frame" x="87" y="64" width="240" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="FPP-kZ-Xpy"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Jnh-1O-igV"/>
@@ -190,7 +191,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-uX-LDa">
-                                        <rect key="frame" x="87" y="118" width="240" height="30"/>
+                                        <rect key="frame" x="87" y="116" width="240" height="30"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-0J-qHV" userLabel="Progress View">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
@@ -303,20 +304,8 @@
                     <view key="view" contentMode="scaleToFill" id="EbL-Si-P8o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-Ep-axC">
-                                <rect key="frame" x="135" y="435.5" width="144.5" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rfv-sR-uJO"/>
-                        <color key="backgroundColor" red="0.76631693937340561" green="0.93229912936854442" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="slP-Ep-axC" firstAttribute="centerX" secondItem="rfv-sR-uJO" secondAttribute="centerX" id="GVc-N8-Xoa"/>
-                            <constraint firstItem="slP-Ep-axC" firstAttribute="centerY" secondItem="rfv-sR-uJO" secondAttribute="centerY" id="awP-4v-1Tu"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puz-c8-z4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -327,9 +316,6 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
